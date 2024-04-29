@@ -24,13 +24,6 @@ io.on("connection", (socket) => {
     console.log("user disconnected");
   });
   setInterval(() => {
-    let cat = {
-      title: "Kitten " + parseInt(Math.random() * 10),
-      image: "image/Birman.jpg",
-      link: "About Kitten " + parseInt(Math.random() * 10),
-      description:
-        "Demo description about kitten " + parseInt(Math.random() * 10),
-    };
-    socket.emit("cat", cat);
+    socket.emit("number", parseInt(Math.random() * 10));
   }, 1000);
 });
